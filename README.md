@@ -1,6 +1,6 @@
 # NoSQLMap
 
-[![Python 2.6|2.7](https://img.shields.io/badge/python-2.6|2.7-yellow.svg)](https://www.python.org/)
+[![Python 3.x](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-red.svg)](https://github.com/codingo/NoSQLMap/blob/master/COPYING)
 [![Twitter](https://img.shields.io/badge/twitter-@codingo__-blue.svg)](https://twitter.com/codingo_)
 
@@ -28,19 +28,33 @@ Presently the tool's exploits are focused around MongoDB, and CouchDB but additi
 
 ## Requirements
 
-On a Debian or Red Hat based system, the setup.sh script may be run as root to automate the installation of NoSQLMap's dependencies.
+NoSQLMap requires **Python 3.x**. Dependencies are listed in `setup.py` and can be installed automatically with `pip`.
 
 Varies based on features used:
 
--   Metasploit Framework,
--   Python with PyMongo,
--   httplib2,
--   and urllib available.
+-   Python 3
+-   PyMongo
+-   CouchDB Python library
+-   httplib2
+-   requests
+-   ipcalc
+-   pbkdf2
+-   Metasploit Framework (optional, for Meterpreter shell attacks)
 -   A local, default MongoDB instance for cloning databases to. Check [here](http://docs.mongodb.org/manual/installation/) for installation instructions.
 
-There are some various other libraries required that a normal Python installation should have readily available. Your milage may vary, check the script.
+To install all Python dependencies, run:
+
+```
+pip install .
+```
 
 ## Setup
+
+```
+pip install .
+```
+
+Or, using Python directly:
 
 ```
 python setup.py install
@@ -61,10 +75,16 @@ docker-compose run nosqlmap
 
 ## Usage Instructions
 
-Start with
+Start NoSQLMap with:
 
 ```
-python NoSQLMap
+NoSQLMap
+```
+
+or
+
+```
+python nosqlmap.py
 ```
 
 NoSQLMap uses a menu based system for building attacks. Upon starting NoSQLMap you are presented with with the main menu:
@@ -74,6 +94,7 @@ NoSQLMap uses a menu based system for building attacks. Upon starting NoSQLMap y
 2-NoSQL DB Access Attacks
 3-NoSQL Web App attacks
 4-Scan for Anonymous MongoDB Access
+5-Change Platform (Current: MongoDB)
 x-Exit
 ```
 
