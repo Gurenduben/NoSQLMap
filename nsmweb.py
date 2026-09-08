@@ -1,11 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # NoSQLMap Copyright 2012-2017 NoSQLMap Development team
 # See the file 'doc/COPYING' for copying permission
 
 
 from exception import NoSQLMapException
-import urllib.request, urllib.parse, urllib.error
-import urllib.request, urllib.error, urllib.parse
+import urllib.request
+import urllib.error
+import urllib.parse
 import string
 import nsmmongo
 from sys import version_info
@@ -21,7 +22,7 @@ if version_info >= (2, 7, 9):
 
 
 def save_to(savePath, vulnAddrs, possAddrs, strTbAttack,intTbAttack):
-    fo = open(savePath, "wb")
+    fo = open(savePath, "w")
     fo.write ("Vulnerable URLs:\n")
     fo.write("\n".join(vulnAddrs))
     fo.write("\n\n")

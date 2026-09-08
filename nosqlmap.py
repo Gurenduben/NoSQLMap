@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # NoSQLMap Copyright 2012-2017 NoSQLMap Development team
 # See the file 'doc/COPYING' for copying permission
@@ -62,10 +62,10 @@ def mainMenu():
     mmSelect = True
     while mmSelect:
         os.system('clear')
-        print(" _  _     ___  ___  _    __  __           ")
-        print("| \| |___/ __|/ _ \| |  |  \/  |__ _ _ __ ")
-        print("| .` / _ \__ \ (_) | |__| |\/| / _` | '_ \\")
-        print("|_|\_\___/___/\__\_\____|_|  |_\__,_| .__/")
+        print(r" _  _     ___  ___  _    __  __           ")
+        print(r"| \| |___/ __|/ _ \| |  |  \/  |__ _ _ __ ")
+        print(r"| .` / _ \__ \ (_) | |__| |\/| / _` | '_ \\\\")
+        print(r"|_|\_\___/___/\__\_\____|_|  |_\__,_| .__/")
         print(" v0.7 codingo@protonmail.com        |_|   ")
         print("\n")
         print("1-Set options")
@@ -492,7 +492,7 @@ def options():
         elif select == "b":
             savePath = input("Enter file name to save: ")
             try:
-                with open(savePath, "wb") as fo:
+                with open(savePath, "w") as fo:
                     fo.write(str(victim) + "," + str(webPort) + "," + str(uri) + "," + str(httpMethod) + "," + str(myIP) + "," + str(myPort) + "," + verb + "," + https)
 
                     if httpMethod == "POST":

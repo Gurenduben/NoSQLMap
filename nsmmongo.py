@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # NoSQLMap Copyright 2012-2017 NoSQLMap Development team
 # See the file 'doc/COPYING' for copying permission
 
 from exception import NoSQLMapException
 import pymongo
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
 import json
 import gridfs
 import itertools

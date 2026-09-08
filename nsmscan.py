@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # NoSQLMap Copyright 2012-2017 NoSQLMap Development team
 # See the file 'doc/COPYING' for copying permission
 
@@ -109,7 +109,7 @@ def massScan(platform, args = None):
             savePath = input("Enter file name to save: ")
             outCounter = 0
             try:
-                fo = open(savePath, "wb")
+                fo = open(savePath, "w")
                 fo.write("IP Address," + platform + " Version\n")
 
                 for server in success:
